@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if warning %}
+<div class="alert alert-warning" role="alert" align="center">
+  {{warning}}
+</div>
+{% endif %}
+  
+
+<div class="jumbotron">
+  <h2 ALIGN="center">WELCOME TO
+    Accendero!!! YOUR NEW PLACE FOR YOUR STORAGE.
+  </h2>
+  <br>
+  <br>
+  <form method="POST" enctype="multipart/form-data">
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter your Email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input type="text" class="form-control" name="name" placeholder="Enter your Name">
+      <small id="emailHelp" class="form-text text-muted"></small>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Phone</label>
+      <input type="text" class="form-control" name="mobile_number" placeholder="Enter your Mobile Number">
+      <small id="emailHelp" class="form-text text-muted"></small>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" name="password" placeholder="Password">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Confirm Password</label>
+      <input type="password" class="form-control" name="repeat_password" placeholder="Repeat Password">
+    </div>
+
+    <br>
+    
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

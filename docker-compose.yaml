@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  flaskapp:
+    container_name: flask_app
+    build: .
+    ports:
+      - 5000:5000
+    restart: always
+    depends_on:
+      - database
+
+  database:
+    container_name: postgresql
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=farhaan
+      - POSTGRES_PASSWORD=farhaan
+      - POSTGRES_DB=assessment
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  postgres-data:

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if warning %}
+<div class="alert alert-warning" role="alert">
+  {{warning}}
+</div>
+{% endif %}
+
+{% if success %}
+<div class="alert alert-success" role="alert">
+  {{success}}
+</div>
+{% endif %}
+
+<div class="jumbotron">
+    <h2 align="center">PLEASE LOGIN FOR 
+        ADMIN ACCESS
+        </h2><br><br>
+  <form method="POST">
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Admin email address</label>
+      <input type="email" class="form-control" name="admin_email" aria-describedby="emailHelp" placeholder="Enter your email">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Admin password</label>
+      <input type="password" class="form-control" name="admin_password" placeholder="Password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

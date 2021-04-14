@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+{% if current_user.is_authenticated %}
+<div class="jumbotron">
+  <h1 align="center">A NEW STORAGE FOR YOUR FILES</h1>
+  <p align="center">Please <a href="{{url_for('users.register')}}">Register</a> for storing new files.
+  </p>
+</div>
+{% endif %}
+
+
+{% endblock %}
